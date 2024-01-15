@@ -45,3 +45,28 @@ showLinksButton3.addEventListener("mouseout", function() {
         linksContainer3.style.display = "none";
     }, 2000);
 });
+
+const loadAppointment=()=>{
+    const firestore = firebase.firestore();
+    firestore
+    .collection('appointments')
+    .get()
+    .then((result)=>{
+        result.forEach((records)=>{
+            const data = records.data();
+            const row = `
+            <tr>
+                <td>${records.id}</td>
+                <td>${data.name}</td>
+                <td>${data.age}</td>
+                <td>${data.contact}</td>
+                <td>${data.Dname}</td>
+                <td>${data.date}</td>
+                <td>${data.time}</td>
+                <td>${data.history}</td>
+            </tr>
+            `;
+            $('#list').append(row);
+        });
+    });
+  };

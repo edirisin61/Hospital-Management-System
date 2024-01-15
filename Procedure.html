@@ -36,16 +36,56 @@
       <span class="material-symbols-outlined">arrow_drop_down</span>
     </button>
     <div class="linksContainer-three" id="linksContainer-three">
-      <a href="HospitalInformation.html">Hospital Information</a><br>
-      <a href="Procedure.html">Hospital Procedure</a><br>
-      <a href="Information.html">Information</a><br>
-      <a href="careers.html">Niroga Career</a>
+      <a href="Information.html">Registration</a><br>
+      <a href="Procedure.html">Hospital Procedure</a>
     </div>
     <div class="div-search">
       <input type="text" placeholder="Search">
       <button>Search</button>
     </div>
   </div>
+
+  <div class="outer">
+    <form action="#" id="myForm" style="width: 100%;">
+      <h2>Medicine Inventry Management</h2>
+      <hr><br>
+      <table>
+        <tr>
+          <td>Serial Number * :</td>
+          <td><input type="number" id="sNumber" style="width: 300px; margin-left: 20px;"></td>
+        </tr>
+        <tr>
+          <td>Name * :</td>
+          <td><input type="text" id="name" style="width: 300px; margin-left: 20px;"></td>
+        </tr>
+        <tr>
+          <td>Quantity * :</td>
+          <td><input type="number" id="Quantity" style="width: 300px; margin-left: 20px;"></td>
+        </tr>
+        <tr>
+          <td>Price * :</td>
+          <td><input type="number" id="price" style="width: 300px; margin-left: 20px;"></td>
+        </tr>
+        <tr>
+          <td>Expiry Date * :</td>
+          <td><input type="date" id="eDate" style="width: 300px; margin-left: 20px;"></td>
+        </tr>
+        <tr>
+          <td>Other Details :</td>
+          <td><textarea name="details" id="details" cols="38" rows="3" style="margin-left: 20px;"></textarea></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="button" id="save" value="Save" style="padding: 5px 15px;" onclick="medicine()">
+            <input type="reset" id="reset" value="Reset" style="margin-left: 70px;  padding: 5px 15px;">
+          </td>
+        </tr>
+      </table>
+    </form>
+
+  </div>
+
   <div class="footer">
     <p>
       <h3>Quick Links</h3>
@@ -85,6 +125,11 @@
     </div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebaseConfig.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="procedure.js"></script>
 </body>
 </html>

@@ -46,29 +46,25 @@ showLinksButton3.addEventListener("mouseout", function() {
     }, 2000);
 });
 
-
-
-const createPatient=()=>{
-    const tempPatient = {
-        name: $('#name').val(),
-        age : $('#age').val(),
-        gender: $('#Gender').val(),
-        contact: $('#contact').val(),
-        history: $('#history').val()
-     };
-
-    const database = firebase.firestore();
-    database
+const loadPatient=()=>{
+    const firestore = firebase.firestore();
+    firestore
     .collection('patients')
-    .add(tempPatient)
-    .then((response)=>{
-        console.log(response);
-    })
-    .catch((error)=>{
-        console.log(error);
+    .get()
+    .then((result)=>{
+        result.forEach((records)=>{
+            const data = records.data();
+            const row = `
+            <tr>
+                <td>${records.id}</td>
+                <td>${data.name}</td>
+                <td>${data.age}</td>
+                <td>${data.gender}</td>
+                <td>${data.contact}</td>
+                <td>${data.history}</td>
+            </tr>
+            `;
+            $('#list').append(row);
+        });
     });
-}
-
-function loadPage() {
-    window.location.href = 'admission-details.html';
-}
+  };

@@ -23,8 +23,8 @@
 }
 
 .linksContainer-one{
-    margin-top: 140px;
-    margin-left: 400px;
+    margin-top: 160px;
+    margin-left: 27vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -45,7 +45,7 @@
 
 .linksContainer-two{
     margin-top: 160px;
-    margin-left: 580px;
+    margin-left: 47vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -66,7 +66,7 @@
 
 .linksContainer-three{
     margin-top: 140px;
-    margin-left: 840px;
+    margin-left: 63vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);

@@ -45,3 +45,31 @@ showLinksButton3.addEventListener("mouseout", function() {
         linksContainer3.style.display = "none";
     }, 2000);
 });
+
+
+const createAppointment=()=>{
+    const tempAppointment = {
+        name: $('#name').val(),
+        age : $('#age').val(),
+        contact: $('#ContactNumber').val(),
+        Dname: $('#Dname').val(),
+        date: $('#date').val(),
+        time: $('#time').val(),
+        history: $('#history').val()
+     };
+
+    const database = firebase.firestore();
+    database
+    .collection('appointments')
+    .add(tempAppointment)
+    .then((response)=>{
+        console.log(response);
+    })
+    .catch((error)=>{
+        console.log(error);
+    });
+} 
+
+function loadPage() {
+    window.location.href = 'chanelling-details.html';
+}

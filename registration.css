@@ -104,50 +104,30 @@
     background-color: red;
 }
 
-.main-img{
-    height: 300px;
-    padding-top: 150px;
-    background-image: url('https://t3.ftcdn.net/jpg/00/58/30/88/240_F_58308820_35Vcb9sOYoXM8goMrvcE6punmd1e496x.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: left;
-    padding-left: 100px;
-    font-family: 'Montserrat', sans-serif;
-    font-family: 'Oswald', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Roboto Slab', serif;
-    font-family: 'Space Grotesk', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-    color: #e0793d;
-    margin-bottom: 25px;
+.show-details{  
+    padding-top: 100px;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.div-form{
-    display: flex;
+table{
+    text-align: center;
+    margin-left: 300px;
 }
 
-.div-form > p{
-    margin: 20px;
+th{
+    padding: 10px;
 }
 
-.nav-form{
-    border: 1px solid #f7bf23;
-    border-radius: 10px;
-    width: 420px;
-    background-color: #ab7ae4;
-    margin: 20px;
-    padding: 20px;
-}
-
-form{
-    padding-left: 20px;
+td{
+    padding: 10px;
 }
 
 .footer{
     height: auto;
     background-color: rgba(11, 5, 24, 0.986);
     color: white;
-    margin-top: 50px ;
+    margin-top: 10px ;
 
     .a{
         color: white;

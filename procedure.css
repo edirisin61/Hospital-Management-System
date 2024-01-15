@@ -23,8 +23,8 @@
 }
 
 .linksContainer-one{
-    margin-top: 140px;
-    margin-left: 400px;
+    margin-top: 160px;
+    margin-left: 27vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -45,7 +45,7 @@
 
 .linksContainer-two{
     margin-top: 160px;
-    margin-left: 580px;
+    margin-left: 47vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -66,7 +66,7 @@
 
 .linksContainer-three{
     margin-top: 140px;
-    margin-left: 840px;
+    margin-left: 63vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -104,11 +104,32 @@
     background-color: red;
 }
 
+.outer{
+    width: 100%;
+    padding-top: 90px;
+    display: flex;
+    justify-content: center;
+    background-color: #00a8ff;
+}
+
+form > h2{
+    text-align: center;
+}
+
+table{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+td{
+    padding-bottom: 15px;
+}
+
 .footer{
     height: auto;
     background-color: rgba(11, 5, 24, 0.986);
     color: white;
-    margin-top: 50px ;
 
     .a{
         color: white;

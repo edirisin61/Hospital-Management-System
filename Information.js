@@ -45,3 +45,28 @@ showLinksButton3.addEventListener("mouseout", function() {
         linksContainer3.style.display = "none";
     }, 2000);
 });
+
+const createDoctor=()=>{
+    const tempDoctor = {
+        name: $('#name').val(),
+        age : $('#age').val(),
+        gender: $('#Gender').val(),
+        contact: $('#contact').val(),
+        specialization: $('#specialization').val()
+     };
+
+    const database = firebase.firestore();
+    database
+    .collection('doctors')
+    .add(tempDoctor)
+    .then((response)=>{
+        console.log(response);
+    })
+    .catch((error)=>{
+        console.log(error);
+    });
+}
+
+function loadPage() {
+    window.location.href = 'registration.html';
+}

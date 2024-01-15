@@ -36,10 +36,8 @@
       <span class="material-symbols-outlined">arrow_drop_down</span>
     </button>
     <div class="linksContainer-three" id="linksContainer-three">
-      <a href="HospitalInformation.html">Hospital Information</a><br>
-      <a href="Procedure.html">Hospital Procedure</a><br>
-      <a href="Information.html">Information</a><br>
-      <a href="careers.html">Niroga Career</a>
+      <a href="Information.html">Registration</a><br>
+      <a href="Procedure.html">Hospital Procedure</a>
     </div>
     <div class="div-search">
       <input type="text" placeholder="Search">
@@ -62,9 +60,9 @@
       <hr>
       <form class="form-body" action="">
       <p>Name * <br>
-      <input type="text" style="width: 350px;" required></p>
+      <input type="text" style="width: 350px;" id="name" required></p>
       <p>Age *<br>
-      <input type="text" style="width: 350px;" required></p>
+      <input type="text" style="width: 350px;" id="age" required></p>
       <p>Gender *<br>
       <select name="Gender" id="Gender" style="width: 350px;">
         <option value="default"></option>
@@ -72,12 +70,12 @@
         <option value="Female">Female</option>
       </select></p>
       <p>Contact Number *<br>
-      <input type="text" style="width: 350px;" required></p>
+      <input type="text" style="width: 350px;" id="contact" required></p>
       <p>Medical History<br>
       <textarea name="history" id="history" cols="45" rows="4"></textarea><br>
-      <button class="button" type="submit" style="width: 80px; margin-left: 25px; margin-top: 5px;">Save</button>
-      <button class="button" style="width: 80px; margin-left: 25px; margin-top: 5px;">View</button>
-      <button class="button" type="reset" style="width: 80px; margin-left: 25px; margin-top: 5px;">Reset</button>
+      <input type="button" style="width: 80px; margin-left: 25px; margin-top: 5px;" value="Save" onclick="createPatient()">
+      <input type="button" style="width: 80px; margin-left: 25px; margin-top: 5px;" value="View" onclick="loadPage()">
+      <input type="reset" style="width: 80px; margin-left: 25px; margin-top: 5px;" value="Reset">
     </form>
     </div>
   </div>
@@ -120,6 +118,11 @@
     </div>
   </div>
 
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebaseConfig.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="admission.js"></script>
 </body>
 </html>

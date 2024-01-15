@@ -45,3 +45,57 @@ showLinksButton3.addEventListener("mouseout", function() {
         linksContainer3.style.display = "none";
     }, 2000);
 });
+
+function medicine() {
+        const sNumber = document.forms["myForm"]["sNumber"].value;
+        const name = document.forms["myForm"]["name"].value;
+        const quantity = document.forms["myForm"]["Quantity"].value;
+        const price = document.forms["myForm"]["price"].value;
+        const eDate = document.forms["myForm"]["eDate"].value;
+        
+    
+        if(sNumber == ""){
+            alert("Enter the Serial Number.");
+            return false;
+        }
+    
+        if(name == ""){
+            alert("Enter the Name.");
+            return false;
+        }
+    
+        if(quantity == ""){
+            alert("Enter the Quantity.");
+            return false;
+        }
+    
+        if(price == ""){
+            alert("Enter the Price.");
+            return false;
+        }
+    
+        if(eDate == ""){
+            alert("Enter the Expiry date.");
+            return false;
+        }
+    
+        const tempMedicine = {
+            serial_number: $('#sNumber').val(),
+            name: $('#name').val(),
+            quantity : $('#Quantity').val(),
+            price: $('#price').val(),
+            Expiry_date: $('#eDate').val(),
+            details: $('#details').val()
+         };
+    
+        const database = firebase.firestore();
+        database
+        .collection('medicine')
+        .add(tempMedicine)
+        .then((response)=>{
+            console.log(response);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+}

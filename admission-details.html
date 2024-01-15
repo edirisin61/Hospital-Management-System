@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="Information.css">
+    <link rel="stylesheet" href="admission-details.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="loadPatient()">
   <div class="header">
     <img src="https://img.freepik.com/free-vector/hand-drawn-medical-pharmacy-symbol_23-2149502315.jpg?size=626&ext=jpg&ga=GA1.2.1919141715.1695224096&semt=ais" alt="" height="70px" width="70px">
     <a class="topic" href="home.html"><h2>Niroga Hospital (Pvt) Ltd</h2></a>
@@ -44,48 +44,32 @@
       <button>Search</button>
     </div>
   </div>
-
-  <div class="main-img">
-    <h2><i>Doctor's Registration</i></h2>
+  <div class="show-details">
+    <h2>Details for Admission</h2>
+    <hr>
+    <table >
+      <thead>
+        <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Contact</th>
+        <th>History</th>
+        </tr>
+      </thead>
+      <tbody id="list">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="div-form">
-    <p>
-      &nbsp;&nbsp;&nbsp;&nbsp;We believe that the quality of care is paramount to both our patients and surgeons and we pride ourselves on 
-      our outstanding clinical reputation in the region.We have the best surgeons available in the region and can assure 
-      you in that you will be referring your patients to highly qualified and experienced medical practitioners.<br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;Our patient satisfaction surveys undertaken everyday at the hospital continue to provide us with outstanding feedback. 
-      Niroga Hospital is a proud member of the Sri Lanka Private Hospital Association and utilises the association's 
-      considerable influence of the private health sector.<br><br>
-      &nbsp;&nbsp;&nbsp;&nbsp;The Specialist Centre includes six consulting rooms and a procedure room where surgeons can consult 
-      with their patients and perform procedures under local Anaesthetic.
-      Patients are able to consult with Specialists, have x-rays, MRI's and ultrasounds and also have their 
-      surgery performed in one convenient location.
-    </p>
-    <div class="nav-form">
-      <p><h2><i>Doctor's Registration</i></h2></p>
-      <hr>
-      <form class="form-body" action="">
-      <p>Name * <br>
-      <input type="text" style="width: 350px;" id="name" required></p>
-      <p>Age *<br>
-      <input type="text" style="width: 350px;" id="age" required></p>
-      <p>Gender *<br>
-      <select name="Gender" id="Gender" style="width: 350px;">
-        <option value="default"></option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-      </select></p>
-      <p>Contact Number *<br>
-      <input type="text" style="width: 350px;" id="contact" required></p>
-      <p>Specialized fields *<br>
-      <textarea name="specialization" id="specialization" cols="45" rows="4" required></textarea><br>
-      <input type="button" style="width: 80px; margin-left: 25px; margin-top: 5px;" value="Save" onclick="createDoctor()">
-      <input type="button" style="width: 80px; margin-left: 25px; margin-top: 5px;" value="View" onclick="loadPage()">
-      <input type="reset" style="width: 80px; margin-left: 25px; margin-top: 5px;" value="Reset">
-    </form>
-    </div>
-  </div>
-
   <div class="footer">
     <p>
       <h3>Quick Links</h3>
@@ -130,6 +114,6 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
   <script src="firebaseConfig.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <script src="Information.js"></script>
+  <script src="admission-details.js"></script>
 </body>
 </html>

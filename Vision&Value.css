@@ -23,8 +23,8 @@
 }
 
 .linksContainer-one{
-    margin-top: 140px;
-    margin-left: 400px;
+    margin-top: 160px;
+    margin-left: 27vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -45,7 +45,7 @@
 
 .linksContainer-two{
     margin-top: 160px;
-    margin-left: 580px;
+    margin-left: 47vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -66,7 +66,7 @@
 
 .linksContainer-three{
     margin-top: 140px;
-    margin-left: 840px;
+    margin-left: 63vw;
     position: absolute;
     text-align: left;
     border: 1px solid rgb(164, 164, 218);
@@ -137,9 +137,10 @@
     padding-left: 50px;
 }
 
-.nav-details-sub > pre{
+.nav-details-sub > p{
     color: #191977;
     font-weight: bold;
+    font-size: xx-large;
     font-style: italic;
     border-radius: 180px;
     padding: 30px;
@@ -158,7 +159,7 @@
 .values{
     text-align: center;
     background-color: #f5f1b0;
-    height: 400px;
+    height: auto;
     border: 1px solid red;
     border-radius: 90px;
     padding: 20px;

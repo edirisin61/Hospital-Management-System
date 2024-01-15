@@ -36,15 +36,68 @@
       <span class="material-symbols-outlined">arrow_drop_down</span>
     </button>
     <div class="linksContainer-three" id="linksContainer-three">
-      <a href="HospitalInformation.html">Hospital Information</a><br>
-      <a href="Procedure.html">Hospital Procedure</a><br>
-      <a href="Information.html">Information</a><br>
-      <a href="careers.html">Niroga Career</a>
+      <a href="Information.html">Registration</a><br>
+      <a href="Procedure.html">Hospital Procedure</a>
     </div>
     <div class="div-search">
       <input type="text" placeholder="Search">
       <button>Search</button>
     </div>
+  </div>
+  <div class="outer">
+    <h2>INVOICE</h2>
+    <hr>
+    <form action="">
+      <table>
+        <tr>
+          <td>Name :</td>
+          <td><input type="text" id="name" style="width:30vw;" required></td>
+        </tr>
+        <tr>
+          <td>Age :</td>
+          <td><input type="number" id="age" style="width:30vw;" required></td>
+        </tr>
+        <tr>
+          <td>Contact Number :</td>
+          <td><input type="text" id="ContactNumber" style="width:30vw;" required></td>
+        </tr>
+        <tr>
+          <td style="padding-bottom: 110px;">Services provided :</td>
+          <td>
+            <input type="checkbox" id="check-chanelling" onchange="showText1()">&nbsp;&nbsp;&nbsp;Chanelling 
+            <input type="text" id="chanelling" value="Cost Rs.5000.00" style="display: none; border: none;"> <br>
+            <input type="checkbox" id="check-laboratory services" onchange="showText2()">&nbsp;&nbsp;&nbsp;Laboratory services 
+            <input type="text" id="laboratory services" value="Cost Rs.12000.00" style="display: none; border: none;"> <br>
+            <input type="checkbox" id="check-councelling" onchange="showText3()">&nbsp;&nbsp;&nbsp;councelling
+            <input type="text" id="councelling" value="Cost Rs.15000.00" style="display: none; border: none;"> <br> 
+            <input type="checkbox" id="check-clinic treatements" onchange="showText4()">&nbsp;&nbsp;&nbsp;clinic treatement 
+            <input type="text" id="clinic treatements" value="Cost Rs.17000.00" style="display: none; border: none;"> <br>
+            <input type="checkbox" id="check-pharmacitical services" onchange="showText5()">&nbsp;&nbsp;&nbsp;pharmacitical services 
+            <input type="text" id="pharmacitical services" value="Cost Rs.8000.00" style="display: none; border: none;"> 
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>
+            <input type="button" id="btn-total" value="Calculate Cost" onclick="calculateTotal()">
+          </td>
+        </tr>
+        <tr>
+          <td>Total Costs :</td>
+          <td><input type="text" id="Total" style="width:30vw;"></td>
+        </tr>
+        <tr>
+          <td>Payment Status :</td>
+          <td>
+            <input type="radio" name="payment" value="Paid"> &nbsp;Paid&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="payment" value="non-Paid">&nbsp;Non-Paid  
+          </td>
+        </tr>
+      </table> 
+      <br>
+      <input type="button"  id="submit" value="Submit" style="margin-left: 150px; border-radius: 5px; padding: 5px 15px;" onclick="createInvoice()">
+      <input type="reset"  id="reset" value="Reset" style="margin-left: 50px; border-radius: 5px; padding: 5px 15px;">
+    </form>
   </div>
   <div class="footer">
     <p>
@@ -85,6 +138,12 @@
     </div>
   </div>
 
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="firebaseConfig.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="GoingHome.js"></script>
 </body>
 </html>

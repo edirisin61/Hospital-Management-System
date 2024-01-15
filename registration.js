@@ -45,3 +45,26 @@ showLinksButton3.addEventListener("mouseout", function() {
         linksContainer3.style.display = "none";
     }, 2000);
 });
+
+const loadDoctor=()=>{
+    const firestore = firebase.firestore();
+    firestore
+    .collection('doctors')
+    .get()
+    .then((result)=>{
+        result.forEach((records)=>{
+            const data = records.data();
+            const row = `
+            <tr>
+                <td>${records.id}</td>
+                <td>${data.name}</td>
+                <td>${data.age}</td>
+                <td>${data.gender}</td>
+                <td>${data.contact}</td>
+                <td>${data.specialization}</td>
+            </tr>
+            `;
+            $('#list').append(row);
+        });
+    });
+  };
