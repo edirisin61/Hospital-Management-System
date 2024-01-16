@@ -104,6 +104,22 @@
     background-color: red;
 }
 
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin-right: 10px;
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
+
+.list{
+    display: none;
+}
+
 .main-img{
     height: 300px;
     padding-top: 150px;
@@ -124,6 +140,7 @@
 
 .div-form{
     display: flex;
+    align-items:flex-start;
 }
 
 .div-form > p{
@@ -133,7 +150,7 @@
 .nav-form{
     border: 1px solid #f7bf23;
     border-radius: 10px;
-    width: 420px;
+    width: 100vw;
     background-color: #ab7ae4;
     margin: 20px;
     padding: 20px;
@@ -151,5 +168,100 @@ form{
 
     .a{
         color: white;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .header{
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .main-slide{
+        margin-top: -100px;
+    }
+
+    .drop-down{
+        display: none;
+    }
+
+    .material-symbols-outlined{
+        display: none;
+    }
+
+    .div-search{
+        display: none;
+    }
+    
+    tr {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .checkbtn{
+        display: block;
+        margin-left: 20vw;
+    }
+
+    .list{
+        padding-top: 60px;
+        width: 100%;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: block;
+    }
+
+    .list > li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+      
+    .list > li > a{
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+      }
+
+    .check:checked > .list{
+        left: 0;
+    }
+
+    .div-form{
+        display: grid;
+        align-items: flex-start;
+        padding-top: 10px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .nav-form{
+        width: 400px;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    form{
+        padding: 0px;
+    }
+
+    .div-form > p{
+        margin-bottom: 20px;
+    }
+
+    .main-img{
+        padding: 0px;
     }
 }

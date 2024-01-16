@@ -104,6 +104,22 @@
     background-color: red;
 }
 
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+    margin-right: 10px;
+    display: none;
+  }
+
+  #check{
+    display: none;
+  }
+
+.list{
+    display: none;
+}
+
 .leaders-details{
     padding-top: 100px;
 
@@ -125,12 +141,81 @@ table{
     
 }
 
+
 @media only screen and (max-width: 1000px) {
+    .header{
+        width: 100%;
+        margin-top: 0px;
+    }
+
     td {
         width: 100%;
         display: flex;
         justify-content: center;
     }
+
+    .main-slide{
+        margin-top: -100px;
+    }
+
+    .drop-down{
+        display: none;
+    }
+
+    .material-symbols-outlined{
+        display: none;
+    }
+
+    .div-search{
+        display: none;
+    }
+    
+    tr {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+    }
+
+    iframe{
+        width: 100%;
+    }
+
+    .checkbtn{
+        display: block;
+        margin-left: 20vw;
+    }
+
+    .list{
+        padding-top: 60px;
+        width: 100%;
+        background: #2c3e50;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        display: block;
+    }
+
+    .list > li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+      
+    .list > li > a{
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    a:hover,a.active{
+        background: none;
+        color: #0082e6;
+      }
+
+    .check:checked > .list{
+        left: 0;
+    }
+
 }
 
 td{
